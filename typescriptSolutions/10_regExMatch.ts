@@ -8,6 +8,16 @@
 // which ensure that the entire string s matches the pattern p from start to end. The test method is used to check if the regular expression
 // pattern matches the string s. If the pattern matches the string, the function returns true, otherwise it returns false.
 
+
+/*
+The regular expression is constructed by concatenating the ^ character, which matches the beginning of the input string,
+with p, which specifies the pattern to match, and then concatenating the $ character, which matches the end of the input string.
+The test method of the RegExp object is then called on s, which returns true if s matches the regular expression and false otherwise. 
+The result of this call is returned by the isMatchTheBestSolution function.
+In other words, this function checks whether the input string s matches the pattern specified in p exactly from the beginning to the end of the string. 
+For example, if s is "hello" and p is "h.l", the function would return true because the pattern h.l matches the string hello exactly.
+*/
+
 function isMatchTheBestSolution(s: string, p: string): boolean {
   return new RegExp('^' + p + '$').test(s);
 }
